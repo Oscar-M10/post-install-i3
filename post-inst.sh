@@ -2,7 +2,7 @@
 #software basico de post instalaciòn
 sudo pacman -Syu
 #
-sudo pacman -S git dmenu rofi moc neovim ranger nautilus alacritty firefox feh picom brightnessctl mpv dunst arandr lxappearance
+sudo pacman -S  dmenu rofi moc neovim ranger nautilus alacritty firefox feh picom brightnessctl mpv dunst arandr lxappearance
 #configuracion de picon 
 #sudo vim /etc/xdg/picom.conf 
 #inactive-opacity = 1
