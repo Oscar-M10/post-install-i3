@@ -11,20 +11,20 @@ sudo systemctl enable NetworkManager --now
 #una nueva actualizaciòn completa
 sudo pacman -Sy && sudo pacman -Syu 
 #instalando configuraciòn de audio
-sudo pacman -S pulseaudio pavucontrol --noconfirm 
-#github
-git clone https://github.com/Oscar-M10/linux-i3.git && cd linux-i3
-#mkdir ~/.config
+sudo pacman -S pulseaudio pavucontrol tlp --noconfirm
+#instalacion de yay
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si --noconfirm
+cd ..
 sudo rm -rf ~/.config/i3
-mv alacritty ~/.config
-mv alsi ~/.config
-mv nvim ~/.config
-mv coc ~/.config
-mv moc ~/.config 
-mv polybar ~/.config
-mv rofi ~/.config
-mv pulse ~/.config
-mv i3 ~/.config 
-mv dconf ~/.config
-mv i3blocks ~/.config 
-mv rofi ~/.config
+sudo chown oscar:oscar .config/polybar/config
+#Enable snapd
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si --noconfirm
+cd ..
+sudo rm -rf snapd
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+
