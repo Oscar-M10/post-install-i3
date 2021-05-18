@@ -21,16 +21,26 @@ mv i3blocks ~/.config
 #configuracion de picon 
 #sudo vim /etc/xdg/picom.conf 
 #inactive-opacity = 1
-sudo pacman -Syu
-sudo pacman -S python-pip python2 nodejs npm ruby rubygems --noconfirm
+sudo pacman -Syu --noconfirm
+sudo pacman -S python-pip python2 nodejs npm ruby rubygems unzip --noconfirm
 pip install neovim dbus-python
 gem install neovim
 sudo npm i -g neovim
-sudo pacman -S xsel fzf ripgrep fd the_silver_searcher prettier --nonconfirm
-sudo pacman -S xorg-fonts-misc ttf-font-awesome
+sudo pacman -S xsel fzf ripgrep fd the_silver_searcher prettier  wget jre8-openjdk-headless jdk-openjdk --nonconfirm
+#look thema, iconos
+sudo pacman -S xorg-fonts-misc ttf-font-awesome arc-gtk-theme arc-icon-theme numlockx papirus-icon-theme blueman neofetch --noconfirm 
 #https://fontawesome.com/cheatsheet
+#Install oh-my-zsh via wget
+sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+#
 yay -S polybar siji-git ttf-unifont
 sudo chown oscar:oscar .config/polybar/config
 #install spotify
 sudo snap install spotify
+#Minecraft
+mkdir ~/.programas 
+#añadir minicraft.jar en esa carpeta
+sudo mv minecraft  /usr/local/bin
+chmod +x  /usr/local/bin/minecraft
+
 

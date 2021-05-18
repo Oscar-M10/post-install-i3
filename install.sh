@@ -11,7 +11,7 @@ sudo systemctl enable NetworkManager --now
 #una nueva actualizaciòn completa
 sudo pacman -Sy && sudo pacman -Syu 
 #instalando configuraciòn de audio
-sudo pacman -S pulseaudio pavucontrol tlp --noconfirm
+sudo pacman -S pulseaudio pavucontrol tlp base-devel --noconfirm
 #instalacion de yay
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -27,4 +27,8 @@ cd ..
 sudo rm -rf snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
-
+#kernel linux zen
+sudo -S linux-zen linux-zen-headers --noconfirm
+#sudo nvim /etc/pacman.d/mirrorlist
+#Server = http://mirrors.acm.wpi.edu/archlinux/$repo/os/$arch
+#Server = http://blackarch.pr0s3c.nl/blackarch/
