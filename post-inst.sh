@@ -2,7 +2,7 @@
 #software basico de post instalaciòn
 sudo pacman -Syu 
 #software importante
-sudo pacman -S  dmenu rofi moc neovim ranger nautilus alacritty firefox feh picom brightnessctl mpv dunst arandr lxappearance gnome-screenshot --noconfirm
+sudo pacman -S  zsh dmenu rofi moc neovim ranger nautilus alacritty firefox feh picom brightnessctl mpv dunst arandr lxappearance gnome-screenshot --noconfirm
 sudo tlp start 
 #config github
 git clone https://github.com/Oscar-M10/linux-i3.git && cd linux-i3
