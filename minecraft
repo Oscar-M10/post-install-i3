@@ -1,5 +1,4 @@
 #!/bin/bash
 echo Abriendo Minecraft
-cd ~/.programas
+cd ~/.programas/minecraft
 java -jar minecraft.jar
-

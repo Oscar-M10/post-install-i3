@@ -3,22 +3,27 @@
 sudo pacman -Sy && sudo pacman -Syu
 sudo pacman -S xorg i3 lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings wget --noconfirm
 sudo systemctl enable lightdm
+
 #instalando aplicaciones de wifi
 sudo pacman -S networkmanager linux-firmware dhcpcd dhclient network-manager-applet --noconfirm
 #sudo systemctl enable dhcpcd@eth0
 #sudo systemctl start dhcpcd@eth0
 sudo systemctl enable NetworkManager --now
+
 #una nueva actualizaciòn completa
 sudo pacman -Sy && sudo pacman -Syu 
+
 #instalando configuraciòn de audio
 sudo pacman -S pulseaudio pavucontrol 
+
 #instalando ahorro bateria
 sudo pacman -S tlp tlp-rdw base-devel --noconfirm
 systemctl enable tlp.service
 systemctl enable NetworkManager-dispatcher.service
 systemctl mask systemd-rfkill.service systemd-rfkill.socket
 pacman -S acpi_call
-#instalacion de yay
+
+#instalacion de yay y snap
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
@@ -32,12 +37,14 @@ cd ..
 sudo rm -rf snapd
 sudo systemctl enable --now snapd.socket
 sudo ln -s /var/lib/snapd/snap /snap
+
 #kernel linux zen
 #sudo -S linux-zen linux-zen-headers --noconfirm
 #sudo nvim /etc/pacman.d/mirrorlist
 #INSTALL REPOSITORIO 
 sudo echo "Server = http://mirrors.acm.wpi.edu/archlinux/$repo/os/$arch" >> /etc/pacman.d/mirrorlist
 sudo echo "Server = http://blackarch.pr0s3c.nl/blackarch" >> /etc/pacman.d/mirrorlist
+
 #Instalación de java 8
 sudo pacman -Suuy && sudo pacman -S java8-openjfx jdk8-openjdk jre8-openjdk jre8-openjdk-headless
 
@@ -63,7 +70,8 @@ sudo pacman -S xorg-fonts-misc ttf-font-awesome arc-gtk-theme arc-icon-theme num
 #https://fontawesome.com/cheatsheet
 #Install oh-my-zsh via wget
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-
+#Extra adornos 
+sudo pacman -S lsb bat 
 
 
 
