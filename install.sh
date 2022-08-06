@@ -11,7 +11,7 @@ sudo pacman -S networkmanager linux-firmware dhcpcd dhclient network-manager-app
 sudo systemctl enable NetworkManager --now
 
 #una nueva actualizaciòn completa
-sudo pacman -Sy && sudo pacman -Syu 
+#sudo pacman -Sy && sudo pacman -Syu 
 
 #instalando configuraciòn de audio
 sudo pacman -S pulseaudio pavucontrol 
